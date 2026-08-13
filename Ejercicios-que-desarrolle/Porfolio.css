@@ -2,12 +2,11 @@ body {
     font-family: 'Bitcount Prop Single', sans-serif;
     line-height: 1.6;
     margin: 2%;
+    background-color:#0a0a0c;
+    color: #e0e0e0;
+    box-sizing: border-box;
 }
 
-body{  
-    box-sizing: border-box;
-    background-color: #24292f
-}
 div{
     width: 50%; /*uso de porcentaje para que se adapte al tamaño de la pantalla. width sirve para establecer el ancho del elemento */
     padding: 1%;/*espacio entre los elementos*/
@@ -29,8 +28,13 @@ div{
 
 .h{
     text-decoration: underline; /*subraya el texto*/
+    color: #ff00ff;
 }
-
+.r{
+    border: none;              /* Quitamos el borde por defecto del navegador */
+    height: 2px;               /* Le damos el grosor que queramos */
+    border: 1px solid #00ffcc;
+}
 .texto-imagen{
     display: flex; /*display: flex; para alinear los elementos horizontalmente*/
     align-items: center; /*alinia los elementos verticalmente*/
@@ -42,13 +46,18 @@ div{
     display: inline-block;/*sirve para que el boton se muestre como un bloque en linea*/
     margin-top: 1%;/*espacio superior*/
     padding: 1% 1%;/*espacio interno*/
-    background-color: #24292f;/*color de fondo*/
-    color: white;/*color de texto*/
+    background-color:#fcee0a;/*color de fondo*/
+    color:#0a0a0c;/*color de texto*/
     text-decoration: none;/*decoracion del texto (none=ninguna)*/
     border-radius: 4%;/*espacio en las esquinas*/
     font-weight: bold;/*negrita*/
 }
-
+.bot{
+    display: flex;
+    align-items: center;
+    gap: 8%;
+}
 .boton-github:hover {/*hover es el estado cuando el mouse está sobre el botón*/
-    background-color: #444c56;/*color que toma cuando el mouse está sobre el botón*/
+    background-color:#00ffcc;/*color que toma cuando el mouse está sobre el botón*/
+    color: #0a0a0c;
 }
