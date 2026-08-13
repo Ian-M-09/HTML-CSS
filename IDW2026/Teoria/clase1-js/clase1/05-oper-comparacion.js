@@ -1,0 +1,5 @@
+console.log(5 == "5");   // true  (Coerción de tipo: convierte "5" a número) 
+console.log(5 === "5");  // false (Estricto: Number !== String) 
+console.log(0 == false);  // true  (Coerción) 
+console.log(0 === false); // false (Distinto tipo) 
+console.log(5 !== "5");  // true  (Son de distinto tipo) 
