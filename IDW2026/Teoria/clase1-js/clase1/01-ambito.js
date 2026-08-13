@@ -1,6 +1,6 @@
 // --- 1. COMPORTAMIENTO DE VAR --- 
 if (true) { 
-var x = 10; 
+var x = 10; // var es una variable global
 } 
 console.log(x); // Imprime: 10 (Fuga de ámbito fuera del bloque 'if') 
 
@@ -9,7 +9,7 @@ if (true) {
 let a = 10; 
 console.log(a); // Imprime: 10 (Accesible dentro del bloque) 
 } 
-// console.log(a); // Uncaught ReferenceError: a is not defined 
+// console.log(a); // Uncaught ReferenceError: a is not defined let es una variable local
 
 // Reasignación y re-declaración con let: 
 let c = 20; 
@@ -18,7 +18,7 @@ c = 30; // VÁLIDO: Reasignación de valor
 
 // --- 3. COMPORTAMIENTO DE CONST --- 
 if (true) { 
-const d = 10; 
+const d = 10; // es una constante y no es global
 console.log(d); // Imprime: 10 
 } 
 // console.log(d); // Uncaught ReferenceError: d is not defined 

@@ -6,6 +6,7 @@ body {
 
 body{  
     box-sizing: border-box;
+    background-color: #24292f
 }
 div{
     width: 50%; /*uso de porcentaje para que se adapte al tamaño de la pantalla. width sirve para establecer el ancho del elemento */
