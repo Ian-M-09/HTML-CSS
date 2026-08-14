@@ -18,6 +18,7 @@ div{
     justify-content: center;/*centra de lado a lado*/
     align-items: center; /*centra de arriba a abajo*/
     text-decoration: underline; /*subraya el texto*/
+    color: #ff00ff
 }
 
 .lenguajes{
@@ -25,8 +26,15 @@ div{
     justify-content: center;/*centra de lado a lado*/
     align-items: center; /*centra de arriba a abajo*/
 }
-
+.Cursos{
+    display: flex;
+    justify-content: center;/*centra de lado a lado*/
+    align-items: center; /*centra de arriba a abajo*/
+    gap: 10%;
+}
 .h{
+    justify-content: center;/*centra de lado a lado*/
+    align-items: center; /*centra de arriba a abajo*/
     text-decoration: underline; /*subraya el texto*/
     color: #ff00ff;
 }
