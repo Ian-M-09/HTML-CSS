@@ -1,7 +1,7 @@
 /* 1)dividir (Declarativa + Validador): Crear una función declarada dividir(a, b) que devuelva 
 la división, pero verifique con un if que b no sea cero.
 */
-function Dividir(a,b){
+function dividir(a,b){
     if(b===0){
         console.log("no se puede dividir por 0")
         throw new Error('No se puede dividir por 0') // creo un error con throw new para validar los datos
@@ -31,19 +31,19 @@ rl.question('Ingrese el dividendo: ', (d) => { imprime en consola Ingrese el div
     });
 });
 */
-console.log(`El resultado es: ${Dividir(4,2)}`)
+console.log(`El resultado es: ${dividir(4,2)}`)
 
 /*2) saludar (Declarativa + Template Literals): Crear una función declarada saludar(nombre 
 = "Invitado") que use parámetros por defecto y devuelva el mensaje usando template 
 literals (`Hola, ${nombre}`).
  */
 
-function Saludar(nombre="invitado"){
+function saludar(nombre="invitado"){
     return `Hola, ${nombre}` 
 }
 
-console.log(Saludar("Ian"))
-console.log(Saludar())
+console.log(saludar("Ian"))
+console.log(saludar())
 
 /*calcularArea (Función Flecha - Retorno Implícito): Crear una función flecha en una sola 
 línea calcularArea(largo, ancho) para calcular el área de un rectángulo. */
@@ -55,14 +55,13 @@ console.log(`El area es: ${Area(3,6)}`)
 /*esPar (Función Flecha): Crear una función flecha esPar(numero) que devuelva true si es 
 par y false si es impa */
 
-const Par_Impar=(a)=> a%2
-console.log(Par_Impar(2)==0)
-console.log(Par_Impar(3)==0)
+const esPar=(a)=> a%2
+console.log(esPar(2)==0)
+console.log(esPar(3)==0)
 /*encontrarMayor (Flecha u Operador Ternario): Crear una función encontrarMayor(a, b) 
 que retorne el número más grande utilizando el operador ternario */
 
-function May(a,b){
-    let c= a>b ? `El mayor es ${a}`: `El mayor es ${b}`
-    return c
+function encontrarMayor(a,b){
+    return  a>b ? `El mayor es ${a}`: `El mayor es ${b}`
 }
-console.log(May(1,2))// funciona solo para numeros distintos, no tiene en cuenta numerso iguales
+console.log(encontrarMayor(1,2))// funciona solo para numeros distintos, no tiene en cuenta numerso iguales
