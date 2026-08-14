@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Contacto</title>
+  <style>
+    form { display: flex; flex-direction: column; gap: 12px; max-width: 400px; margin: 20px auto; font-family: sans-serif; }
+    input, textarea, button { padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; }
+    button { background: #4CAF50; color: white; border: none; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+    button:hover { background: #45a049; }
+    button:disabled { background: #cccccc; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+
+  <form id="form">
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu correo" required>
+    <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+    <button type="submit" id="btn-submit">Enviar</button>
+  </form>
+
+  <!-- SDK de EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // 1. REEMPLAZA CON TU PUBLIC KEY
+    emailjs.init("TU_PUBLIC_KEY");
+
+    const form = document.getElementById('form');
+    const btn = document.getElementById('btn-submit');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+
+      // 2. REEMPLAZA CON TU SERVICE_ID Y TEMPLATE_ID
+      emailjs.sendForm('TU_SERVICE_ID', 'TU_TEMPLATE_ID', this)
+        .then(() => {
+          alert('¡Correo enviado con éxito!');
+          form.reset();
+        })
+        .catch((err) => {
+          alert('Error al enviar el correo. Por favor intenta de nuevo.');
+          console.error('EmailJS Error:', err);
+        })
+        .finally(() => {
+          btn.disabled = false;
+          btn.textContent = 'Enviar';
+        });
+  });
+  </script>
+</body>
+</html>

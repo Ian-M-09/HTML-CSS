@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <form id="form-registro">
+            <h2>Crear Cuenta</h2>
+
+            <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" placeholder="Micaela Alancay">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" placeholder="ejemplo@correo.com">
+            </div>
+
+            <div class="form-group">
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" placeholder="Mínimo 6 caracteres">
+            </div>
+
+            <div class="form-group">
+                <label for="pass-confirm">Confirmar contraseña</label>
+                <input type="password" id="pass-confirm" placeholder="Repite tu contraseña">
+            </div>
+
+            <!-- Mensaje de estado -->
+            <p id="mensaje"></p>
+
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    <script src="validacion.js"></script>
+</body>
+</html>
