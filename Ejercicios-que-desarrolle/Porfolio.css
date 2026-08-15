@@ -1,28 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Bitcount Prop Single', sans-serif;
     line-height: 1.6;
-    margin: 2%;
     background-color:#0a0a0c;
     color: #e0e0e0;
-    box-sizing: border-box;
+    padding: 20px 10px;/*espacio entre los elementos*/
 }
 
-div{
-    width: 50%; /*uso de porcentaje para que se adapte al tamaño de la pantalla. width sirve para establecer el ancho del elemento */
-    padding: 1%;/*espacio entre los elementos*/
+.contenedor{
+    width: 90%; /*uso de porcentaje para que se adapte al tamaño de la pantalla. width sirve para establecer el ancho del elemento */
+    max-width: 800px;
     margin: 0 auto;/*margin: 0 auto; centra el elemento horizontalmente*/
 }
 
 .titulo{
-    display:flex;
-    justify-content: center;/*centra de lado a lado*/
-    align-items: center; /*centra de arriba a abajo*/
+    text-align: center;
     text-decoration: underline; /*subraya el texto*/
-    color: #ff00ff
+    color: #ff00ff;
+    margin-bottom: 20px;
 }
 
 .lenguajes{
-    position: relative;
+
     justify-content: center;/*centra de lado a lado*/
     align-items: center; /*centra de arriba a abajo*/
 }
@@ -30,40 +33,71 @@ div{
     display: flex;
     justify-content: center;/*centra de lado a lado*/
     align-items: center; /*centra de arriba a abajo*/
+    flex-wrap: wrap;/*si la pantalla es chica pone la foto una debaj de otra*/
     gap: 10%;
 }
+.Cursos img{
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ff00ff;
+}
+
 .h{
-    justify-content: center;/*centra de lado a lado*/
-    align-items: center; /*centra de arriba a abajo*/
+    text-align: center; /*centra el texto*/
     text-decoration: underline; /*subraya el texto*/
     color: #ff00ff;
+    margin: 20px 0 10px 0;
 }
 .r{
     border: none;              /* Quitamos el borde por defecto del navegador */
-    height: 2px;               /* Le damos el grosor que queramos */
-    border: 1px solid #00ffcc;
+    height: 2px;
+    background-color: #00ffcc;
+    margin: 25px 0;
+}
+@media (max-width: 600px){
+    .texto-imagen{
+        flex-direction: column;
+        text-align: center;
+    }
 }
 .texto-imagen{
     display: flex; /*display: flex; para alinear los elementos horizontalmente*/
     align-items: center; /*alinia los elementos verticalmente*/
     justify-content: space-between; /*distribuye el espacio entre los elementos*/
-    gap: 5%; /*espacio entre los elementos*/
+    gap: 20px; /*espacio entre los elementos*/
 }
-
+.texto-imagen img{/*le doy reglas a las imagenes*/
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;/* la hace circular*/
+    object-fit: cover;
+    border: 2px solid #00ffcc;
+}
+ol,ul{
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+li{
+    margin-bottom: 6px;
+}
 .boton-github {
     display: inline-block;/*sirve para que el boton se muestre como un bloque en linea*/
-    margin-top: 1%;/*espacio superior*/
-    padding: 1% 1%;/*espacio interno*/
+    padding: 10px 20px;/*espacio interno*/
     background-color:#fcee0a;/*color de fondo*/
     color:#0a0a0c;/*color de texto*/
     text-decoration: none;/*decoracion del texto (none=ninguna)*/
-    border-radius: 4%;/*espacio en las esquinas*/
+    border-radius: 6px;/*espacio en las esquinas*/
     font-weight: bold;/*negrita*/
+    transition: background-color 0.2s ease ;/**/
 }
 .bot{
     display: flex;
     align-items: center;
-    gap: 8%;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 .boton-github:hover {/*hover es el estado cuando el mouse está sobre el botón*/
     background-color:#00ffcc;/*color que toma cuando el mouse está sobre el botón*/

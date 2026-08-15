@@ -1,93 +1,206 @@
+<!-- Declaración de que este es un documento HTML5 -->
 <!DOCTYPE html>
+
+<!-- Etiqueta raíz HTML con idioma español -->
 <html lang="es">
+
+<!-- Sección HEAD: información de la página (no visible en pantalla) -->
 <head>
+    <!-- Define la codificación de caracteres como UTF-8 (para acentos y caracteres especiales) -->
     <meta charset="UTF-8">
+    
+    <!-- Viewport: adapta la página a diferentes tamaños de pantalla (responsive) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mí</title>
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Mi Porfolio</title>
+    
+    <!-- Preconexión a Google Fonts para cargar fuentes más rápido -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Importa la fuente "Bitcount Prop Single" desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Porfolio.css"> <el archivo css siempre debe ir al ultimo>
+    
+    <!-- Vincula el archivo CSS externo para los estilos de la página -->
+    <link rel="stylesheet" href="Porfolio.css">
 </head>
 
+<!-- Inicio de la sección visible de la página -->
 <body>
-
-    <div class="titulo">
-        <h1 class="h"> Ian Alejandro Miño </h1>
-    </div>
-
-    <div class="texto-imagen">
+    <!-- Contenedor principal que envuelve todo el contenido (mejor que div para semántica) -->
+    <main class="contenedor">
         
-        <img
-            src="https://i.ibb.co/C38ybPDW/imagen-ian-png.jpg"
-            alt="mi rostro"
-            width="160">
+        <!-- Sección de título con clase para estilos CSS -->
+         <!-- El div es como una caja donde guardo cosas, la clase class es reutilizable a diferencia del id-->
+        <div class="titulo">
+            <!-- Encabezado de nivel 1 (más importante). Clase "h" para aplicar estilos CSS -->
+            <h1 class="h">Ian Alejandro Miño</h1>
+        </div>
 
-        <p>
-            Hola, Mi nombre es Ian, tengo 20 años y soy estudiante de Informatica. 
-            Me gusta el mundo de la tecnología en todas sus formas, desde el armado y mantenimiento de hardware hasta el desarrollo web. 
-            Actualmente me enfoco en aprender a crear sistemas funcionales y escribir código que resuelva problemas reales.   
-        </p>
-    </div>
+        <!-- Sección de presentación: imagen y descripción personal -->
+        <div class="texto-imagen">
+            
+            <!-- Imagen del perfil desde URL externa
+                 src: fuente/ruta de la imagen
+                 alt: texto alternativo que se muestra si la imagen no carga -->
+            <img 
+                src="https://i.ibb.co/C38ybPDW/imagen-ian-png.jpg"
+                alt="mi rostro">
+            
+            <!-- Párrafo con descripción personal -->
+            <p>
+                Hola, Mi nombre es Ian, tengo 20 años y soy estudiante de Informatica. 
+                Me gusta el mundo de la tecnología en todas sus formas, desde el armado y mantenimiento de hardware hasta el desarrollo web. 
+                Actualmente me enfoco en aprender a crear sistemas funcionales y escribir código que resuelva problemas reales.   
+            </p>
+        </div>
 
-    <hr class="r">
+        <!-- Línea horizontal divisoria con clase para estilos -->
+        <hr class="r">
 
-    <div class="lenguajes">
-        <h2 class="h">
-            Lenguajes que se
-        </h2>
-        
-        <ol>
-            <li> C </li>
-                <ul>
-                    <li>Lo aprendo en la universidad haciendo ejercicios desde lo mas basico hasta arboles con listas enlazadas</li>
-                </ul>
-            <li>JavaScript</li>
-                <ul>
-                    <li> Lo aprendo por mi cuenta para empezar con el desarrollo de paginas web </li>
-                </ul>
-            <li>Python</li>
-                <ul>
-                    <li> Lo aprendo en la universidad haciendo ejercicios desde los mas basico hasta vectores</li>
-                </ul>
-            <li>C++</li>
-                <ul>
-                    <li> Lo aprendo por amor al arte</li>
-                </ul>
-        </ol>
+        <!-- Sección de lenguajes de programación -->
+        <div class="lenguajes">
+            <!-- Encabezado de nivel 2 (menos importante que h1) -->
+            <h2 class="h">
+                Herramientas y Lenguajes de Programación
+            </h2>
+            
+            <!-- Lista ORDENADA (numerada): cada elemento es un número (1, 2, 3, etc.) -->
+            <ol>
+                <!-- Elemento de lista: C y su descripción anidada -->
+                <li><strong> C/C++ </strong>
+                    <!-- Lista DESORDENADA anidada (con viñetas) dentro del elemento anterior -->
+                    <ul>
+                        <!-- Elemento de la lista desordenada -->
+                        <li>Nivel: Académico sólido / Fundacional.</li>
+                        <li>Gestión manual de memoria (punteros, asignación dinámica con malloc/free).</li>
+                        <li>Estructuras de datos fundamentales: listas enlazadas, colas, pilas y árboles.</li>
+                        <li>Análisis de algoritmos (búsqueda lineal, binaria, ordenamiento) y optimización de rendimiento.</li>
+                        <li>Lógica estructurada y comprensión de cómo interactúa el software directamente con el hardware y la memoria.</li>
+                    </ul>
+                </li>
+                
+                <!-- Elemento de lista: JavaScript y su descripción -->
+                <li><strong>JavaScript</strong>
+                    <ul>
+                        <li>Nivel: Práctico / Desarrollo web y backend.</li>
+                        <li>Lógica asíncrona, manejo de eventos y manipulación del DOM</li>
+                        <li>Desarrollo en el entorno Node.js para construir lógica de backend y APIs.</li>
+                        <li>Integración de lógica de negocio (ej. sistemas de stock, validaciones y flujos de datos).</li>
+                    </ul>
+                </li>
+                
+                <!-- Elemento de lista: Python y su descripción -->
+                <li><strong>Python</strong>
+                    <ul>
+                        <li>Intermedio / Scripting y resolución de problemas.</li>
+                        <li>Sintaxis limpia y desarrollo rápido de scripts/automatizaciones.</li>
+                        <li>Lógica algorítmica y modularidad.</li>
+                        <li>Manejo de estructuras de datos nativas (diccionarios, listas, sets) y manipulación de archivos.</li>
+                    </ul>
+                </li>
+                <li><strong>HTML</strong>
+                    <ul>
+                        <li>Estructura semántica de documentos, accesibilidad básica, formularios, manejo del DOM.</li>
+                    </ul>
+                </li>
+                <li><strong>CSS</strong>
+                    <ul>
+                        <li>Maquetación moderna (Flexbox, CSS Grid), diseño responsivo (media queries), transiciones y estilización de interfaces limpias.</li>
+                    </ul>
+                </li>
+                <li><strong>Git</strong>
+                    <ul>
+                        <li>Control de versiones local: ramas (branching), resolución de conflictos, merge, rebase y trazabilidad de commits.</li>
+                    </ul>
+                </li>
+                <li><strong>Terminal / Línea de Comandos (Bash/Zsh):</strong>
+                    <ul>
+                        <li>Navegación por el sistema de archivos, ejecución de scripts, compilación desde terminal (gcc/g++), manejo de paquetes y configuración de entornos.</li>
+                    </ul>
+                </li>
+                <li><strong>GitHub</strong>
+                    <ul>
+                        <li>Repositorios remotos, trabajo colaborativo, Pull Requests, documentación con Readmes y uso de GitHub Codespaces para entornos en la nube.</li>
+                    </ul>
+                </li>
+                <li><strong>GitKraken</strong>
+                    <ul>
+                        <li>Gestión visual de árboles de Git, historial de ramas y agilización de flujos de trabajo en equipo.</li>
+                    </ul>
+                </li>
+                <li><strong>VS Code</strong>
+                    <ul>
+                        <li>Editor principal de código, configuración de extensiones para C/C++, JavaScript, linters, snippets y terminal integrada.</li>
+                    </ul>
+                </li>
+                <li><strong>Sistemas y Hardware</strong>
+                    <ul>
+                        <li>Conocimiento de arquitectura de hardware, mantenimiento, diagnóstico y optimización de sistemas.</li>
+                    </ul>
+                </li>
+            </ol>
 
-        <h2 class="h">Cosas que quiero aprender</h2>
-        <ul>
-            <li>React</li>
-            <li>SQL</li>
-            <li>CSS</li>
-            <li>PostgreSQL</li>
-            <li>TypeScript</li>
-            <li>Arquitectura y seguridad</li>
-            <li>APIs</li>
-        </ul>
+            <!-- Encabezado para la siguiente sección -->
+            <h2 class="h">Currently Exploring / Roadmap Técnico</h2>
+            
+            <!-- Lista DESORDENADA (con viñetas) de tecnologías y objetivos futuros a aprender y consolidar -->
+            <ul>
+                <!-- Cada elemento usa <strong> para destacar el nombre de la tecnología en negrita -->
+                <!-- Elemento: -->
+                <li><strong>Frontend moderno:</strong> React o TypeScript (el paso natural tras dominar JavaScript/HTML/CSS).</li>
+                <!-- Elemento:  -->
+                <li><strong>Backend & Arquitectura:</strong> Express.js (para armar APIs más robustas con Node) y profundización en Docker (contenedores básicos)</li>
+                <!-- Elemento: -->
+                <li><strong>Bases de datos / Cloud:</strong> ORM/Query Builders (como Prisma o Sequelize) o despliegue básico (Render, Vercel, Railway).</li>
+                <!-- Elemento: PostgreSQL -->
+                <li><strong>PostgreSQL:</strong> Modelado relacional complejo, optimización de consultas, indexación y diseño de bases de datos robustas para aplicaciones escalables.</li>
+                <!-- Elemento: TypeScript -->
+                <li><strong>TypeScript:</strong> Incorporación de tipado estático sobre JavaScript para prevenir errores en tiempo de desarrollo y escribir código más predecible y mantenible.</li>
+                <!-- Elemento: Arquitectura y seguridad -->
+                <li><strong>Arquitectura de Software y Seguridad:</strong> Buenas prácticas de diseño modular (Clean Architecture / MVC), manejo seguro de datos, autenticación/autorización y protección contra vulnerabilidades web comunes.</li>
+                <!-- Elemento: objetivo -->
+                <li><strong>Objetivo a mediano plazo:</strong> Consolidarme como Full Stack Developer, unificando el desarrollo de frontend moderno con backends escalables, seguros y conectados a bases de datos robustas.</li>
+            </ul>
 
+            <!-- Encabezado para sección de cursos completados -->
             <h2 class="titulo">Cursos hechos</h2>
+            
+            <!-- Contenedor para las imágenes de certificados -->
             <div class="Cursos">
-                    <img src="https://i.postimg.cc/j2NXDf7C/IMG-20260315-134803.jpg" height="200" alt="Certificado 1" 
-                    alt="Curso desarrollo con IA"
-                    width="360">
-                    <img width="50" > <!-- Espacio entre imágenes -->
-                    <img src="https://i.postimg.cc/cCq7GJ5V/IMG-20260410-131445.jpg" height="200" alt="Certificado 2" 
-                    alt="Curso de Ciberseguridad"
-                    width="360">
+                <!-- Primera imagen de certificado desde URL externa -->
+                <img src="https://i.postimg.cc/j2NXDf7C/IMG-20260315-134803.jpg" alt="Certificado 1">
+                <!-- Segunda imagen de certificado desde URL externa -->
+                <img src="https://i.postimg.cc/cCq7GJ5V/IMG-20260410-131445.jpg" alt="Certificado 2">
             </div>
-    </div>
-    <hr class="r">
-    <div class="bot">
-        <h2 class="h"> Mis proyectos y Contacto: </h2>
-        <a href="https://github.com/Ian-M-09" class="boton-github" target="_blank" rel="noopener noreferrer">
-            Mi GitHub
-        </a>
-    </div>
-    
-    <!--target sirve para abrir el link en otra pestaña y no perder la pagina actual _blank es para abrirlo en otra pestaña-->
-    <!--rel sirve para que el navegador no pueda acceder a la pagina que se abre en otra pestaña y asi evitar ataques de seguridad noopener noreferrer es para evitar ataque de seguridad-->
+        </div>
+        
+        <!-- Línea horizontal divisoria -->
+        <hr class="r">
+        <!-- Sección de contacto y proyectos -->
+        <div class="bot">
+            <!-- Encabezado de nivel 2 -->
+            <h2 class="h">Mis proyectos y Contacto:</h2>
+            
+            <!-- Enlace a GitHub
+                 href: URL de destino del enlace
+                 class: estilos CSS especiales para este botón
+                 target="_blank": abre el enlace en una nueva pestaña
+                 rel="noopener noreferrer": medida de seguridad para evitar que la página abierta acceda a window.opener -->
+            <a href="https://github.com/Ian-M-09" class="boton-github" target="_blank" rel="noopener noreferrer">
+                Mi GitHub
+            </a>
+        </div>
+        
+        <!-- NOTAS SOBRE ATRIBUTOS:
+             - target="_blank": abre el enlace en otra pestaña sin perder la página actual
+             - rel="noopener": evita que la página destino acceda a la página de origen (seguridad)
+             - rel="noreferrer": no envía información del referrer a la página destino (privacidad)
+        -->
+    </main>
 </body>
+
+<!-- Cierre de la etiqueta HTML -->
 </html>
 
