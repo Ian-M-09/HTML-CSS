@@ -1,105 +1,183 @@
+/* Selector universal: aplica estilos a TODOS los elementos de la página */
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Incluye el padding y border en el cálculo del ancho/alto total */
+    margin: 0; /* Elimina los márgenes externos predeterminados */
+    padding: 0; /* Elimina el espacio interno predeterminado */
 }
+
+/* Estilos para el elemento body (cuerpo de la página) */
 body {
-    font-family: 'Bitcount Prop Single', sans-serif;
-    line-height: 1.6;
-    background-color:#0a0a0c;
-    color: #e0e0e0;
-    padding: 20px 10px;/*espacio entre los elementos*/
+    font-family: 'Bitcount Prop Single', sans-serif; /* Establece la fuente del texto (tipografía) */
+    line-height: 1.6; /* Aumenta el espacio entre líneas de texto para mejor legibilidad */
+    background-color:#0a0a0c; /* Color de fondo muy oscuro (casi negro) */
+    color: #e0e0e0; /* Color del texto gris claro */
+    padding: 20px 10px; /* Espacio interno: 20px arriba-abajo, 10px izquierda-derecha */
 }
 
+/* Contenedor principal que envuelve el contenido */
 .contenedor{
-    width: 90%; /*uso de porcentaje para que se adapte al tamaño de la pantalla. width sirve para establecer el ancho del elemento */
-    max-width: 800px;
-    margin: 0 auto;/*margin: 0 auto; centra el elemento horizontalmente*/
+    width: 90%; /* El ancho es el 90% del elemento padre. el elemento padre es el html*/
+    max-width: 800px; /* El ancho máximo no puede exceder 800px */
+    margin: 0 auto; /* Centra el elemento horizontalmente (0 arriba-abajo, auto izquierda-derecha) */
 }
 
+/* Estilos para el título principal */
 .titulo{
-    text-align: center;
-    text-decoration: underline; /*subraya el texto*/
-    color: #ff00ff;
-    margin-bottom: 20px;
+    text-align: center; /* Alinea el texto al centro */
+    text-decoration: underline; /* Añade una línea debajo del texto */
+    color: #ff00ff; /* Color magenta/fucsia */
+    margin-bottom: 20px; /* Espacio debajo del título */
 }
 
+/* Contenedor para la sección de lenguajes */
 .lenguajes{
-
-    justify-content: center;/*centra de lado a lado*/
-    align-items: center; /*centra de arriba a abajo*/
+    justify-content: center; /* Centra los elementos de lado a lado (horizontalmente) */
+    align-items: center; /* Centra los elementos de arriba a abajo (verticalmente) */
 }
+
+/* Contenedor flexible para mostrar cursos/logos */
 .Cursos{
-    display: flex;
-    justify-content: center;/*centra de lado a lado*/
-    align-items: center; /*centra de arriba a abajo*/
-    flex-wrap: wrap;/*si la pantalla es chica pone la foto una debaj de otra*/
-    gap: 10%;
-}
-.Cursos img{
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #ff00ff;
+    display: flex; /* Activa el modelo de diseño flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben */
+    gap: 10%; /* Espacio de 10% entre los elementos */
 }
 
+/* Estilos para las imágenes dentro de la clase Cursos */
+.Cursos img{
+    width: 100%; /* El ancho es el 100% de su contenedor */
+    max-width: 320px; /* Pero no puede ser más ancho que 320px */
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    border-radius: 8px; /* Redondea las esquinas 8 píxeles */
+    border: 1px solid #ff00ff; /* Borde de 1 píxel sólido de color magenta */
+}
+
+/* Estilos para los encabezados de secciones (clase h) */
 .h{
-    text-align: center; /*centra el texto*/
-    text-decoration: underline; /*subraya el texto*/
-    color: #ff00ff;
-    margin: 20px 0 10px 0;
+    text-align: center; /* Alinea el texto al centro */
+    text-decoration: underline; /* Subraya el texto */
+    color: #ff00ff; /* Color magenta */
+    margin: 20px 0 10px 0; /* Espacios: 20px arriba, 0 derecha, 10px abajo, 0 izquierda */
 }
+
+/* Estilos para líneas horizontales/separadores (clase r) */
 .r{
-    border: none;              /* Quitamos el borde por defecto del navegador */
-    height: 2px;
-    background-color: #00ffcc;
-    margin: 25px 0;
+    border: none; /* Quita cualquier borde */
+    height: 2px; /* Altura de 2 píxeles */
+    background-color: #00ffcc; /* Color de fondo cian/turquesa */
+    margin: 25px 0; /* Espacios de 25px arriba y abajo */
 }
+
+/* Media query: aplica estilos cuando la pantalla es menor o igual a 600px de ancho */
 @media (max-width: 600px){
     .texto-imagen{
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Cambia la dirección de los elementos a vertical */
+        text-align: center; /* Alinea el texto al centro */
     }
 }
+
+/* Contenedor flexible que combina texto e imagen en una fila */
 .texto-imagen{
-    display: flex; /*display: flex; para alinear los elementos horizontalmente*/
-    align-items: center; /*alinia los elementos verticalmente*/
-    justify-content: space-between; /*distribuye el espacio entre los elementos*/
-    gap: 20px; /*espacio entre los elementos*/
+    display: flex; /* Activa flexbox para alinear elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Distribuye el espacio equitativamente entre los elementos */
+    gap: 20px; /* Espacio de 20px entre los elementos */
 }
-.texto-imagen img{/*le doy reglas a las imagenes*/
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;/* la hace circular*/
-    object-fit: cover;
-    border: 2px solid #00ffcc;
+
+/* Estilos específicos para imágenes dentro de texto-imagen */
+.texto-imagen img{
+    width: 150px; /* Ancho de 150 píxeles */
+    height: 150px; /* Alto de 150 píxeles */
+    border-radius: 50%; /* Hace la imagen circular (50% = círculo perfecto) */
+    object-fit: cover; /* Escala la imagen para cubrir el área sin distorsionarse */
 }
+
+/* Estilos para listas ordenadas (ol) y desordenadas (ul) */
 ol,ul{
-    padding-left: 25px;
-    margin-bottom: 15px;
+    padding-left: 25px; /* Espacio interno de 25px a la izquierda */
+    margin-bottom: 15px; /* Espacio externo de 15px abajo */
 }
+ol>li>strong,ul>li>strong{/*le cambio el color a lo que esta en negrita de la listas (los titulos)*/
+    color:#00ffcc;
+}
+
+/* Estilos para los elementos de lista (li) */
 li{
-    margin-bottom: 6px;
+    margin-bottom: 6px; /* Espacio externo de 6px debajo de cada elemento */
 }
+
+/* Estilos para los botones que enlazan a GitHub */
 .boton-github {
-    display: inline-block;/*sirve para que el boton se muestre como un bloque en linea*/
-    padding: 10px 20px;/*espacio interno*/
-    background-color:#fcee0a;/*color de fondo*/
-    color:#0a0a0c;/*color de texto*/
-    text-decoration: none;/*decoracion del texto (none=ninguna)*/
-    border-radius: 6px;/*espacio en las esquinas*/
-    font-weight: bold;/*negrita*/
-    transition: background-color 0.2s ease ;/**/
+    display: inline-block; /* Se muestra como un bloque en línea (permite padding/ancho) */
+    padding: 10px 20px; /* Espacio interno: 10px arriba-abajo, 20px izquierda-derecha */
+    background-color:#fcee0a; /* Color de fondo amarillo brillante */
+    color:#0a0a0c; /* Color del texto casi negro */
+    text-decoration: none; /* Quita la línea subrayada del enlace */
+    border-radius: 6px; /* Redondea las esquinas 6 píxeles */
+    font-weight: bold; /* Pone el texto en negrita */
+    transition: background-color 0.2s ease; /* Anima el cambio de color en 0.2 segundos */
 }
+
+/* Contenedor flexible para organizar los botones */
 .bot{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    display: flex; /* Activa flexbox */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 15px; /* Espacio de 15px entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan si no caben */
 }
-.boton-github:hover {/*hover es el estado cuando el mouse está sobre el botón*/
-    background-color:#00ffcc;/*color que toma cuando el mouse está sobre el botón*/
-    color: #0a0a0c;
+
+/* Estilos cuando el cursor está sobre el botón (efecto hover) */
+.boton-github:hover {
+    background-color:#00ffcc; /* Cambia el color de fondo a cian cuando pasa el mouse */
+    color: #0a0a0c; /* Mantiene el color del texto casi negro */
+}
+
+.seccion-contacto{
+    display: flex;/*activa flexbox. alinea los elementos */
+    flex-direction: column;/*en columnas verticales */
+    align-items: center;/*centra el formulario en medio de la pagina*/
+    width: 100%;/*delimita el ancho que puede ocupar*/
+}
+
+.formulario-contacto{
+    display: flex;/*activa flexbox. alinea los elementos */
+    flex-direction: column;/*en columnas verticales*/
+    width: 100%;/*delimita el ancho que puede ocupar*/
+    max-width: 480px;/*delimita el ancho maximo de pixeles que puede ocupar*/
+    gap: 10px;/*espacio entre elementos*/
+    margin-top: 10px;/*empuja hacia abajo el elemento desde el margen superior*/ 
+}
+
+.formulario-contacto label{/*cambio el color de las "cajas" label*/
+    font-weight: bold;/*texto en negrita*/
+    color:#00ffcc;/*color asignado*/
+}
+
+.formulario-contacto input, .formulario-contacto textarea{
+    width: 100%;/*delimita el ancho que puede ocupar*/
+    padding: 10px;/*delimita el espacio interno*/
+    background-color: #16161a;/*color del fondo*/
+    border-radius: 6px;/*redondea las esquinas*/
+    color: #e0e0e0;/*cambia el color*/
+    font-family: inherit;/*hace que los campos hereden la fuente personalizada que agregue*/
+    font-size: 1.1rem;/*cambia el tamaño de las letras*/
+}
+
+.boton-enviar{
+    margin-top: 10px;/*empuja el boton 10px hacia abajo desde el margen superior*/
+    padding: 12px;/*Define el espacio interior en el boton*/
+    background-color: #fcee0a;/*Cambia el color del fondo*/
+    color: #0a0a0c;/*color del texto*/
+    font-weight: bold;/*pone en texto en negrita*/
+    border: none;/*quita el borde*/
+    border-radius: 6px;/*redonde las esquinas*/
+    cursor: pointer;/*cambia el cursor cuando paso sobre el boton*/
+    font-family: inherit;/*hereda la fuente(tipo de letra)*/
+    transition: background-color 0.2s ease, transform 0.1s esae;/*anima cambios de color y transformacion */
+}
+.boton-enviar:hover{
+    background-color: #00ffcc;/*color del fondo al pasar el cursor*/
+    transform: translateY(-2px);/*se mueve 2px hacia arriba cuando pasa el cursos por arriba*/
 }
