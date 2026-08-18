@@ -33,24 +33,24 @@
     <main class="contenedor">
         
         <!-- Sección de título con clase para estilos CSS -->
-         <!-- El div es como una caja donde guardo cosas, la clase class es reutilizable a diferencia del id-->
+        <!-- El div es como una caja donde guardo cosas, la clase class es reutilizable a diferencia del id-->
         <div class="titulo">
             <!-- Encabezado de nivel 1 (más importante). Clase "h" para aplicar estilos CSS -->
-            <h1 class="h">Ian Alejandro Miño</h1>
+            <h1 class="h" id="titulo-principal">Ian Alejandro Miño</h1>
         </div>
 
         <!-- Sección de presentación: imagen y descripción personal -->
         <div class="texto-imagen">
             
             <!-- Imagen del perfil desde URL externa
-                 src: fuente/ruta de la imagen
-                 alt: texto alternativo que se muestra si la imagen no carga -->
+                src: fuente/ruta de la imagen
+                alt: texto alternativo que se muestra si la imagen no carga -->
             <img 
                 src="https://i.ibb.co/C38ybPDW/imagen-ian-png.jpg"
                 alt="mi rostro">
             
             <!-- Párrafo con descripción personal -->
-            <p>
+            <p id="parrafo">
                 Hola, Mi nombre es Ian, tengo 20 años y soy estudiante de Informatica. 
                 Me gusta el mundo de la tecnología en todas sus formas, desde el armado y mantenimiento de hardware hasta el desarrollo web. 
                 Actualmente me enfoco en aprender a crear sistemas funcionales y escribir código que resuelva problemas reales.   
@@ -185,10 +185,10 @@
             <h2 class="h">Mis proyectos:</h2>
             
             <!-- Enlace a GitHub
-                 href: URL de destino del enlace
-                 class: estilos CSS especiales para este botón
-                 target="_blank": abre el enlace en una nueva pestaña
-                 rel="noopener noreferrer": medida de seguridad para evitar que la página abierta acceda a window.opener -->
+                href: URL de destino del enlace
+                class: estilos CSS especiales para este botón
+                target="_blank": abre el enlace en una nueva pestaña
+                rel="noopener noreferrer": medida de seguridad para evitar que la página abierta acceda a window.opener -->
             <a href="https://github.com/Ian-M-09" class="boton-github" target="_blank" rel="noopener noreferrer">
                 Mi GitHub
             </a>
@@ -217,9 +217,9 @@
             </form>
         </div>
         <!-- NOTAS SOBRE ATRIBUTOS:
-             - target="_blank": abre el enlace en otra pestaña sin perder la página actual
-             - rel="noopener": evita que la página destino acceda a la página de origen (seguridad)
-             - rel="noreferrer": no envía información del referrer a la página destino (privacidad)
+            - target="_blank": abre el enlace en otra pestaña sin perder la página actual
+            - rel="noopener": evita que la página destino acceda a la página de origen (seguridad)
+            - rel="noreferrer": no envía información del referrer a la página destino (privacidad)
         -->
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>

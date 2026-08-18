@@ -9,7 +9,7 @@
 body {
     font-family: 'Bitcount Prop Single', sans-serif; /* Establece la fuente del texto (tipografía) */
     line-height: 1.6; /* Aumenta el espacio entre líneas de texto para mejor legibilidad */
-    background-color:#0a0a0c; /* Color de fondo muy oscuro (casi negro) */
+    background-color:#230023; /* Color de fondo muy oscuro (casi negro) */
     color: #e0e0e0; /* Color del texto gris claro */
     padding: 20px 10px; /* Espacio interno: 20px arriba-abajo, 10px izquierda-derecha */
 }

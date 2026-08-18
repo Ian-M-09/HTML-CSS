@@ -39,3 +39,38 @@ formulario.addEventListener("submit", function(evento) {
             botonEnviar.disabled = false;
         });
 });
+
+// 1. "Atrapamos" el título usando su ID y lo guardamos en una variable
+const elementoTitulo = document.getElementById('titulo-principal');
+const elementoParrafo=document.getElementById('parrafo')
+// 2. Guardamos el texto que queremos escribir en otra variable
+const textoOriginal = "Ian Alejandro Miño";
+const textoParrafo="Hola, Mi nombre es Ian, tengo 20 años y soy estudiante de Informatica. Me gusta el mundo de la tecnología en todas sus formas, desde el armado y mantenimiento de hardware hasta el desarrollo web. Actualmente me enfoco en aprender a crear sistemas funcionales y escribir código que resuelva problemas reales.";
+
+// 3. Vaciamos el título en la pantalla para que arranque en blanco
+elementoTitulo.innerHTML = "";
+elementoParrafo.innerHTML="";
+
+// 4. Creamos un contador para saber por qué letra vamos
+let contador = 0;
+let contadorP=0;
+// 5. Creamos la función que va a escribir letra por letra
+function efectoEscribir() {
+    // Si el contador es menor a la cantidad de letras del texto...
+    if (contador < textoOriginal.length) {
+        // ...agregamos la letra que toca a la pantalla
+        elementoTitulo.innerHTML += textoOriginal.charAt(contador);
+        // ...y le sumamos 1 al contador para la próxima vuelta
+        contador++;
+        
+        // Volvemos a llamar a la función después de 100 milisegundos
+        setTimeout(efectoEscribir, 100);// funcion recursiva
+    }
+    if(contadorP <textoParrafo.length){
+        elementoParrafo.innerHTML +=textoParrafo.charAt(contadorP);
+        contadorP++;
+        setTimeout(efectoEscribir,100);
+    }
+}
+// 6. Damos la orden de que arranque el efecto
+efectoEscribir();
