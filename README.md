@@ -14,15 +14,6 @@ Repositorio con los ejercicios y proyectos desarrollados durante el curso de **D
 
 ## 📂 Contenido del repositorio
 
-| Ejercicio | Descripción |
-| **01 - Estructura Básica** | Etiquetas de texto, listas y enlaces semánticos.
-| **02 - Formularios y Tablas** | Validación de inputs, estructura de tablas y accesibilidad.
-| **03 - Layout con Flexbox** | Maquetación responsiva de barra de navegación y tarjetas.
-
----
-
-## 📂 Contenido del repositorio
-
 | # | Módulo / Ejercicio | Temas clave | Demo / Carpeta |
 | :---: | :--- | :--- | :---: |
 | **01** | **Estructura y Semántica** | Etiquetas semánticas (`<header>`, `<main>`, `<article>`), listas, enlaces y metadatos. | [Código](./01-estructura-basica) |
