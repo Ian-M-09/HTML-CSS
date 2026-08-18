@@ -74,3 +74,4 @@ function efectoEscribir() {
 }
 // 6. Damos la orden de que arranque el efecto
 efectoEscribir();
+
